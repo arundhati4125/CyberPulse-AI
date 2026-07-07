@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CyberPulse AI</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-shield-halved"></i>
+
+            CyberPulse AI
+
+        </div>
+
+        <ul class="nav-links">
+
+            <li><a href="#">Dashboard</a></li>
+
+            <li><a href="#">Analyzer</a></li>
+
+            <li><a href="#">Reports</a></li>
+
+            <li><a href="#">About</a></li>
+
+        </ul>
+
+    </nav>
+
+    <!-- Hero -->
+
+    <section class="hero">
+
+        <h1>Network Traffic Analyzer</h1>
+
+        <p>
+
+            Enter the network traffic information below and let the AI
+            detect possible cyber attacks.
+
+        </p>
+
+    </section>
+
+    <!-- Input Form -->
+
+    <section class="form-container">
+
+        <h2>
+
+            <i class="fa-solid fa-network-wired"></i>
+
+            Network Information
+
+        </h2>
+
+        <div class="form-grid">
+
+            <div class="input-group">
+
+                <label>Protocol Type</label>
+
+                <select id="protocol">
+
+                    <option value="tcp">TCP</option>
+
+                    <option value="udp">UDP</option>
+
+                    <option value="icmp">ICMP</option>
+
+                </select>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Service</label>
+
+                <select id="service">
+
+                    <option value="http">HTTP</option>
+
+                    <option value="ftp">FTP</option>
+
+                    <option value="smtp">SMTP</option>
+
+                    <option value="domain_u">DNS</option>
+
+                </select>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Flag</label>
+
+                <select id="flag">
+
+                    <option value="SF">SF</option>
+
+                    <option value="S0">S0</option>
+
+                    <option value="REJ">REJ</option>
+
+                </select>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Source Bytes</label>
+
+                <input
+                    type="number"
+                    id="srcBytes"
+                    placeholder="5450">
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Destination Bytes</label>
+
+                <input
+                    type="number"
+                    id="dstBytes"
+                    placeholder="0">
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Logged In</label>
+
+                <select id="loggedIn">
+
+                    <option value="1">Yes</option>
+
+                    <option value="0">No</option>
+
+                </select>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Connection Count</label>
+
+                <input
+                    type="number"
+                    id="count"
+                    placeholder="9">
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Service Count</label>
+
+                <input
+                    type="number"
+                    id="srvCount"
+                    placeholder="9">
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Same Service Rate</label>
+
+                <input
+                    type="number"
+                    step="0.01"
+                    id="sameRate"
+                    placeholder="1.00">
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Host Count</label>
+
+                <input
+                    type="number"
+                    id="hostCount"
+                    placeholder="9">
+
+            </div>
+
+        </div>
+
+        <button id="scanBtn">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            Analyze Traffic
+
+        </button>
+
+    </section>
+
+    <!-- Results -->
+
+    <section class="dashboard">
+
+        <div class="card">
+
+            <h2>Threat Status</h2>
+
+            <p id="status">Waiting...</p>
+
+        </div>
+
+        <div class="card">
+
+            <h2>Attack Type</h2>
+
+            <p id="attack">---</p>
+
+        </div>
+
+        <div class="card">
+
+            <h2>Confidence</h2>
+
+            <p id="confidence">0%</p>
+
+        </div>
+
+        <div class="card">
+
+            <h2>Severity</h2>
+
+            <p id="severity">---</p>
+
+        </div>
+
+    </section>
+
+    <section class="recommendation">
+
+        <h2>
+
+            <i class="fa-solid fa-lightbulb"></i>
+
+            AI Recommendation
+
+        </h2>
+
+        <p id="recommendation">
+
+            Click Analyze Traffic to start AI prediction.
+
+        </p>
+
+    </section>
+
+    <footer>
+
+        © 2026 CyberPulse AI
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
